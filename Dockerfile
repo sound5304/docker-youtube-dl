@@ -48,9 +48,9 @@ RUN set -x && \
     apt-get remove -y ${TEMP_PACKAGES[@]} && \
     apt-get autoremove -y && \
     apt-get clean -y && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /src && \
+    # rm -rf /var/lib/apt/lists/* /tmp/* /src && \
     # Document version
-    yt-dlp --version > /IMAGE_VERSION
+    # yt-dlp --version > /IMAGE_VERSION
 
 # # Copy init script, set workdir & entrypoint
 COPY init /init
